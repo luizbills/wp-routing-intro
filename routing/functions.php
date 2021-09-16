@@ -9,7 +9,7 @@ add_filter( 'query_vars', function( $query_vars ) {
     return $query_vars;
 } );
 
-add_action( 'template_include', function( $template ) {
+add_filter( 'template_include', function( $template ) {
 
     if ( get_query_var( 'character' ) == false || get_query_var( 'character' ) == '' ) {
         return $template;
